@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2">
+	<link rel="stylesheet"  href="css/jquery.mobile-1.3.2.min.css">
+	<script src="css/jquery.js"></script>
+	<script src="css/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<style>
+#t{text-align:justify; line-height:1.5; border-style: solid;border-width: 0px; border-color: #000 #000; background-color: #fafafa;border-radius: 0px; padding: 8px 12px 8px 12px; background-image:"gambar/paper.jpg"
+
+ position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+
+
+
+
+
+} 
+
+#t h1{padding-bottom:5px; padding-top:5px; margin-bottom:10px;text-align:center; border-style: solid; border-bottom: double #666; border-top: double; border-left: 0px; border-right: 0px;background-color: none;border-radius: 0px; line-height:1.2; font-family: "georgia" }
+#t h2{padding-bottom:0px; margin-bottom:10px;text-align:left; border-style: solid;border-width: 0px; border-color: #000000; background-color: none;border-radius: 0px; font-family: "georgia"}
+
+#t h4{padding-bottom:0px; margin-bottom:20px;text-align:center; background-color: #73AD21;border-radius: 5px; color:white; text-shadow:0 0 0;}
+
+
+.arab {
+	font-size: 25px!important; line-height: 46px!important;
+	font-family: "Times New Roman", Tahoma, sans-serif;
+	font-weight: normal;
+	text-align: right;
+	direction: rtl;
+}
+
+#my-wrapper {
+    padding-top : 45px;
+}
+#my-wrapper form {
+    position :fixed;
+    top      : 15px;
+    left     : 15px;
+    width    : 95%;
+    z-index  : 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+  text-indent: 0%;
+}
+.c {
+
+text-align: center;
+}
+
+
+.effect8
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	
+}
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+
+.image {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+
+}
+
+.style1 {
+	color: #FF0000
+}
+.style2 {
+	color: #000099
+}
+</style>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="content">
+  <div id="my-wrapper" >
+    <ul data-role="listview" data-autodividers="false" data-inset="true" data-filter="true" data-theme="d" data-filter-placeholder="cari ungkapan disini" data-filter-theme="e">
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">A few</h2><h3 class="style1">Sedikit / sejumlah</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">A long time ago</h2><h3 class="style1">Dulu sekali/dahulu kala</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">A one way ticket</h2><h3 class="style1">Tiket sekali jalan</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">A  round trip ticket</h2><h3 class="style1">Tiket pulang pergi</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">About 300 kilometers</h2><h3 class="style1">Sekitar tiga ratus kilometer</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Across from the post office</h2><h3 class="style1">Di seberang kantor pos</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">All day</h2><h3 class="style1">Sepanjang hari</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Am I pronouncing it correctly?</h2><h3 class="style1">Apakah saya mengucapkannya secara benar?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">And you?</h2><h3 class="style1">Dan Anda?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Anything else?</h2><h3 class="style1">Ada lagi?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are there any concerts?</h2><h3 class="style1">Apakah ada konser?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are they coming this evening?</h2><h3 class="style1">Apakah mereka datang malam ini?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you afraid?</h2><h3 class="style1">Apakah Anda takut?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you allergic to anything?</h2><h3 class="style1">Apakah Anda punya alergi?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you busy?</h2><h3 class="style1">Apakah Anda sibuk?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you comfortable?</h2><h3 class="style1">Apakah Anda merasa nyaman?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you coming this evening?</h2><h3 class="style1">Apakah Anda datang malam ini?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you free tonight?</h2><h3 class="style1">Apakah Anda ada waktu malam ini?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you hungry?</h2><h3 class="style1">Apakah Anda lapar?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you married?</h2><h3 class="style1">Apakah Anda sudah menikah?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you okay?</h2><h3 class="style1">Apakah Anda baik-baik saja?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you ready?</h2><h3 class="style1">Apakah Anda siap?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you sick?</h2><h3 class="style1">Apakah Anda sakit?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Are you sure?</h2><h3 class="style1">Apakah Anda yakin?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">As soon as possible</h2><h3 class="style1">Secepat Mungkin</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">At 3 o'clock</h2><h3 class="style1">Pada pukul 3 tepat</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Be careful</h2><h3 class="style1">Hati-hati</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Don't worry</h2><h3 class="style1">Jangan kuatir</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Good idea</h2><h3 class="style1">Ide yang bagus</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">How are you?</h2><h3 class="style1">Apa kabar?</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">I don't like that</h2><h3 class="style1">Saya tidak suka itu</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">I feel good</h2><h3 class="style1">Saya merasa baik</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">I have a headache</h2><h3 class="style1">Saya sakit kepala</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">I have a stomachache</h2><h3 class="style1">Saya sakit perut</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">I have a trouble</h2><h3 class="style1">Saya punya masalah</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">I have a dream</h2><h3 class="style1">Saya mempunyai impian</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">I am fine</h2><h3 class="style1">Saya baik-baik saja</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Look for</h2><h3 class="style1">Mencari</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Look after</h2><h3 class="style1">Memelihara</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Look forward</h2><h3 class="style1">Menunggu</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Take a bow</h2><h3 class="style1">Menundukkan Kepala</h3></li>
+<li><img src="icon/icon-phrases.png" class="image"><h2 class="style2">Thanks for everything</h2><h3 class="style1">Terima kasih untuk segalanya</h3></li>
+
+
+
+
+
+
+
+
+		
+</ul>
+  </div> </div>
+</div> 
+
+
+
+	
+</body>
+</html>
